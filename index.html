@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xem Phim</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .movie-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .movie {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+            cursor: pointer;
+        }
+        .movie:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .movie-details {
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Xem Phim</h1>
+<div class="movie-list">
+    <div class="movie" onclick="showDetails('Phim 1', 'Mô tả phim 1')">Phim 1</div>
+    <div class="movie" onclick="showDetails('Phim 2', 'Mô tả phim 2')">Phim 2</div>
+    <div class="movie" onclick="showDetails('Phim 3', 'Mô tả phim 3')">Phim 3</div>
+    <!-- Thêm nhiều phim ở đây -->
+</div>
+
+<div class="movie-details" id="movieDetails">
+    <h2 id="movieTitle"></h2>
+    <p id="movieDescription"></p>
+</div>
+
+<script>
+    function showDetails(title, description) {
+        document.getElementById('movieTitle').innerText = title;
+        document.getElementById('movieDescription').innerText = description;
+        document.getElementById('movieDetails').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
